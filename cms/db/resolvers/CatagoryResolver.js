@@ -2,7 +2,7 @@ import Catagory from '../models/catagory'
 
 const CatagoryResolver = {
     Query: {
-      catagories: async (_, { searchString, sortBy }) => {
+      catagories: async () => {
         try {
           return await Catagory.find();
         } catch (err) {
