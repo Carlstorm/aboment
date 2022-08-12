@@ -1,4 +1,4 @@
-import Cms from "../../cms/cms";
+import Cms from "../../cms/Cms";
 
 export default function cms() {
     return <Cms />
