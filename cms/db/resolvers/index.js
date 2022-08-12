@@ -1,7 +1,7 @@
 import CatagoryResolver from "./CatagoryResolver"
 import ProductResolver from "./ProductResolver"
 import InventoryResolver from "./InventoryResolver"
-import AbonnementResolver from "./abonnementResolver"
+import AbonnementResolver from "./AbonnementResolver"
 
 const resolvers = {
     Query: {
