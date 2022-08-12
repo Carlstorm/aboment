@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
-const baseurl = "http://localhost:3000/"
+const baseurl = "https://aboment.vercel.app/"
 
 const CMSclient = new ApolloClient({
     uri: `${baseurl}/api/cms/`,
