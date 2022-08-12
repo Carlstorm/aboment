@@ -1,0 +1,13 @@
+query GET_ABONNEMENTS($searchString: String $sortBy: JSON, $active: Boolean, $inactive: Boolean) {
+  abonnements(searchString: $searchString, sortBy: $sortBy, active: $active, inactive: $inactive) {
+    name
+    startDate
+    endDate
+  }
+}
+
+mutation CREATE_ABONNEMENT($input: AbonnementInput) {
+    create_abonnement(input: $input) {
+      name
+    }
+}

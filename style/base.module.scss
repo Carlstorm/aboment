@@ -1,0 +1,13 @@
+@import './theme.module';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+.app {
+    flex: 1;
+    background: $bg-color;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.15rem;
+
+    a, p, h1, h2, h3, h4, h5, h6, span {
+        margin: 0;
+    }
+}

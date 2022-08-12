@@ -1,0 +1,33 @@
+@import '../../theme.module.scss';
+
+.button {
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: max-content;
+    cursor: pointer;
+
+    &-standard {
+        composes: button;
+        color: white;
+        background: $color-base;
+        box-shadow: inset 0px 0 8px 0px $color-base;
+        transition: background-color 0.2s;
+        &:hover {
+            background: #1f275a;
+            box-shadow: inset 0px 0 8px 0px #406eaa !important;
+        }
+    }
+
+    &-outline {
+        composes: button;
+        color: $color-base;
+        border: solid 2px $color-base;
+        padding: 10px 22px;
+        background: none;
+        &:hover {
+            color: white;
+            background: $color-base-light;
+        }
+    }
+}

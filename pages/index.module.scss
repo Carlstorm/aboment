@@ -1,0 +1,5 @@
+@import '../style/theme.module.scss';
+
+.page {
+    @include page;
+}

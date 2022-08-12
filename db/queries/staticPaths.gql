@@ -1,0 +1,10 @@
+query SHOP_PATHS {
+    products {
+        seo {
+            slug
+        }
+    }
+    catagories {
+        path
+    }
+}

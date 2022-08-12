@@ -1,0 +1,51 @@
+query GET_CATAGORIES {
+  catagories {
+    title
+    path
+    _id
+    thumbnail
+    filters {
+      title
+      type
+      display
+    }
+  }
+}
+
+query GET_CATAGORIES_SIMPLE {
+  catagories {
+    title
+    path
+    _id
+  }
+}
+
+query GET_CATAGORY($id: ID!) {
+  catagory(id: $id) {
+    title
+    _id
+    path
+    filters {
+      title
+      type
+      display
+    }
+  }
+}
+
+
+mutation CREATE_CATAGORY($input: CatagoryInput) {
+    create_catagory(input: $input) {
+      title
+    }
+}
+
+mutation UPDATE_CATAGORY($id: ID!, $input: CatagoryInput) {
+    update_catagory(id: $id, input: $input) {
+      title
+    }
+}
+
+mutation DELETE_CATAGORY($id: ID!) {
+    delete_catagory(id: $id)
+}

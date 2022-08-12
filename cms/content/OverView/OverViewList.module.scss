@@ -1,0 +1,36 @@
+@import '../../theme.module.scss';
+
+.item {
+    box-shadow: $boxShadow-base-light;
+    background-color: $color-base-contrast;
+    border-bottom: 1px solid $color-bg;
+}
+
+.noresults {
+    padding: 8px 16px;
+    box-shadow: $boxShadow-base-light;
+    border-radius: 2px;
+    background: white;
+    color: $color-text;
+    text-align: center;
+    position: absolute;
+    width: max-content;
+    color: $color-base;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 16px;
+}
+
+.inactive {
+    font-weight: bold;
+    color: $color-danger
+}
+
+.active {
+    font-weight: bold;
+    color: $color-success
+}
+
+.loading {
+    position: absolute;
+}

@@ -1,0 +1,62 @@
+query GET_CATAGORIES {
+  catagories {
+    title
+    path
+    _id
+    filters {
+      field
+      display
+    }
+    thumbnail
+  }
+}
+
+query GET_BASE_CATAGORIES {
+    base_catagories {
+        title
+        _id
+    }
+}
+
+query GET_CATAGORY {
+    catagory {
+        title
+    }
+}
+
+
+query GET_CATAGORY_BY_PATH($path: String!) {
+    catagory_by_path(path: $path) {
+        title
+        _id
+        filters {
+            title
+            display
+            type
+        }
+        subcatagories {
+            title
+            _id
+        }
+        directsubcatagories {
+            title
+            _id
+        }
+    }
+}
+
+mutation ADD_CATAGORY($input: CatagoryInput) {
+    newCatagory(input: $input) {
+        title
+    }
+}
+
+mutation UPDATE_CATAGORY($id: ID!, $input: CatagoryInput) {
+    updateCatagory(id: $id, input: $input) {
+        title
+    }
+}
+
+mutation DELETE_CATAGORY($id: ID!) {
+    deleteCatagory(id: $id)
+}

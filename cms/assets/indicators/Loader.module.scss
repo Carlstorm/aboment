@@ -1,0 +1,51 @@
+@import '../../theme.module.scss';
+
+@keyframes ldio-cdskjkd5yh-1 {
+    0% { top: 0%; height: 100% }
+    50% { top: 10%; height: 80% }
+    100% { top: 10%; height: 80% }
+  }
+  @keyframes ldio-cdskjkd5yh-2 {
+    0% { top: 0%; height: 100% }
+    50% { top: 10%; height: 80% }
+    100% { top: 10%; height: 80% }
+  }
+  @keyframes ldio-cdskjkd5yh-3 {
+    0% { top: 0%; height: 100% }
+    50% { top: 10%; height: 80% }
+    100% { top: 10%; height: 80% }
+  }
+  .content div { 
+    position: absolute; 
+    width: 25%
+  }
+
+  .content div:nth-child(1) {
+    left: 0%;
+    background: $color-base;
+    animation: ldio-cdskjkd5yh-1 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: -0.2s
+  }
+  .content div:nth-child(2) {
+    left: 38%;
+    background: $color-base-light;
+    animation: ldio-cdskjkd5yh-2 1s cubic-bezier(0,0.5,0.5,1) infinite;
+    animation-delay: -0.1s
+  }
+  .content div:nth-child(3) {
+    left: 75%;
+    background: $color-base-lightest;
+    animation: ldio-cdskjkd5yh-3 1s cubic-bezier(0,0.5,0.5,1) infinite;
+  }
+  
+  .component {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }

@@ -1,0 +1,45 @@
+@import './theme.module';
+
+.app {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    letter-spacing: 2px;
+    max-height: 100vh;
+    color: $color-text;
+
+    & a, p, h1, h2, h3, h4, h5, h6, span, input, label, select, textarea, td, th {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+    }
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: $color-bg;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $color-base;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #1f275a;
+        box-shadow: inset 0px 0 8px 0px #406eaa !important;
+      }
+}
+
+.page {
+    padding: 40px;
+    gap: 64px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}

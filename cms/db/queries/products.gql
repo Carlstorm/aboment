@@ -1,0 +1,68 @@
+query GET_PRODUCTS($searchString: String, $catagory: ID, $sortBy: JSON) {
+    products(searchString: $searchString, catagory: $catagory, sortBy: $sortBy) {
+        _id
+        title
+        price
+        variantCount
+        catagory {
+            title
+        }
+    }
+}
+
+query GET_PRODUCT($id: ID!) {
+    product(id: $id) {
+        title
+        _id
+        price
+        descr
+        thumbnail
+        variants
+        stock
+        seo {
+            title
+            slug
+            descr
+        }
+        catagory {
+            _id
+        }
+        specs {
+            title
+            value
+        }
+    }
+}
+
+mutation UPDATE_PRODUCT($id: ID!, $input: ProductInput) {
+    update_product(id: $id, input: $input) {
+      title
+    }
+}
+
+mutation CREATE_PRODUCT($input: ProductInput) {
+    create_product(input: $input) {
+        title
+    }
+}
+
+mutation DELETE_PRODUCT($id: ID!) {
+    delete_product(id: $id)
+}
+
+
+mutation CREATE_TEST_DATA {
+    create_test_data
+}
+
+query GET_TEST_DATA {
+    get_test_data {
+        price
+    }
+}
+
+query GET_TEST_DATA_FND {
+    get_test_data_fnd {
+        price
+    }
+}

@@ -1,0 +1,39 @@
+@import '../theme.module.scss';
+
+$bar-width: 224px;
+
+.component {
+    width: $bar-width;
+    background-color: $color-base;
+}
+
+.bg {
+    width: $bar-width;
+    background-size: cover;
+    background-position: center;
+    background-color: $color-base;
+    position: fixed;
+    height: 100vh;
+}
+
+.tabs {
+    padding-top: 48px;
+}
+
+.tab {
+    position: relative;
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    color: $color-base-contrast;
+    &:hover {
+        background: #1c6ea434;
+        box-shadow: inset -2px 0 4px 1px #00d5ff15;
+    }
+    &__active {
+        composes: tab;
+        background: #1c6ea425 !important;
+        box-shadow: inset -2px 0 4px 1px #00d5ff15;
+    }
+}

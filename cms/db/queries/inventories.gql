@@ -1,0 +1,16 @@
+query GET_INVENTORIES($searchString: String, $catagory: ID, $sortBy: JSON) {
+  inventories(searchString: $searchString, catagory: $catagory, sortBy: $sortBy) {
+    title
+    catagory
+    inventory {
+      _id
+      stock
+    }
+  }
+}
+
+mutation UPDATE_INVENTORY($id: ID!, $value: String!) {
+  update_inventory(id: $id, value: $value) {
+    _id
+  }
+}

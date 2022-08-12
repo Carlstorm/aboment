@@ -1,0 +1,54 @@
+query GET_PRODUCTS($searchString: String, $catagories: [ID], $catagory: ID, $sortBy: JSON) {
+    products(searchString: $searchString, catagory: $catagory, catagories: $catagories, sortBy: $sortBy) {
+        _id
+        title
+        price
+        variantCount
+        thumbnail
+        specs {
+            title
+            value
+        }
+        catagory {
+            title
+        }
+    }
+}
+
+query GET_PRODUCT($catagoryParams: [String], $productSlug: String) {
+    product(catagoryParams: $catagoryParams, productSlug: $productSlug) {
+        title
+    }
+}
+
+query GET_PRODUCT_LIST($catagoryParams: [String]) {
+    products(catagoryParams: $catagoryParams) {
+        title
+        price
+        rating
+        path
+        variantDisplay {
+            img
+        }
+    }
+    subcatagories(catagoryParams: $catagoryParams) {
+        title
+        path
+    }
+}
+
+query GET_PRODUCTS_BY_CATAGORY($catagory: ID, $subcatagories: Boolean) {
+    products_by_catagory(catagory: $catagory, subcatagories: $subcatagories) {
+        title
+    }
+}
+
+mutation ADD_PRODUCT($input: ProductInput) {
+    newProduct(input: $input) {
+        title
+    }
+}
+
+mutation DELETE_PRODUCT($id: ID!) {
+    deleteProduct(id: $id)
+}

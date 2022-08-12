@@ -1,0 +1,23 @@
+.component {
+    z-index: 3;
+    background: #00000075;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    cursor: auto;
+    max-height: 85vh;
+    max-width: 80%;
+    background: white;
+    border-radius: 4px;
+    padding: 32px;
+    flex-direction: column;
+}
