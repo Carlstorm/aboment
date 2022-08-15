@@ -7,4 +7,5 @@
 .article {
     @include article;
     min-height: 600px;
+    background: red;
 }
