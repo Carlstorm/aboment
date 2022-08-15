@@ -1,0 +1,52 @@
+@import '../../style/theme.module.scss';
+
+.hero {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: green;
+    aspect-ratio: 10 / 16;
+    max-height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+        aspect-ratio: 16 / 9;
+    }
+
+    &_content {
+        @include article;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        &>h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin: 0;
+            color: white;
+        }
+        &>p {
+            color: white;
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    &_button {
+        text-align: center;
+        color: white;
+        background: rgba(25, 199, 25, 0.897);
+        box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.349);
+        width: max-content;
+        padding: 0.75rem 1rem;
+        font-weight: bold;
+        border-radius: 4px;
+        &:hover {
+            background: rgb(25, 199, 25);
+            cursor: pointer;
+        }
+    }
+}

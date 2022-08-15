@@ -54,15 +54,10 @@ $screen-xl: 1201px;
 @mixin page {
   width: 100%;
   gap: 2rem;
-  padding: calc(3rem + 2rem) 0;
-  @include md {
-    padding: calc(4rem + 2rem) 0;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 :export {
   screenMd: $screen-md

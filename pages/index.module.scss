@@ -3,3 +3,8 @@
 .page {
     @include page;
 }
+
+.article {
+    @include article;
+    min-height: 600px;
+}

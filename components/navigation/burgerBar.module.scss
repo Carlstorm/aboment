@@ -1,0 +1,134 @@
+@import '../../style/theme.module';
+
+.component {
+    height: 3rem;
+    background: $base-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 0.5rem 0 rgba(117, 117, 117, 0.137);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.container {
+    @include container;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    &>a {
+        text-decoration: none;
+    }
+}
+
+.burger {
+    height: 1.25rem;
+    width: 2rem;
+    position: relative;
+    &>div {
+        transition: 0.25s;
+        position: absolute;
+        background: $text-color;
+        width: 100%;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 50%;
+        }
+        &:nth-child(3) {
+            top: 100%;
+        }
+    }
+    &--open {
+        &>div {
+            &:nth-child(1) {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.menu {
+    top: 3rem;
+    transform: translateX(-75vw);
+    display: none;
+    background: $base-color;
+    width: 75vw;
+    height: 75vh;
+    max-width: 28rem;
+    min-width: 16rem;
+    position: absolute;
+    z-index: 10;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+
+
+    &--activated {
+        display: initial;
+        animation-name: nav-close
+    }
+    
+    &--open {
+        animation-name: nav-open;
+    }
+    @keyframes nav-open {
+        from {transform: translateX(-100%)}
+        to {transform: translateX(0%)}
+      }
+    
+    @keyframes nav-close {
+        from {transform: translateX(0%)}
+        to {transform: translateX(-100%)}
+    }
+
+    &_links {
+        margin: 0;
+        padding: 0;
+        &>li {
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            border-bottom: inset #ebebeb 1px;
+            &>a {
+                width: 100%;
+                padding: 1rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.page-overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &--active {
+        pointer-events: initial;
+        opacity: 0.5;
+    }
+}

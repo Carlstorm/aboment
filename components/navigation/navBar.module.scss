@@ -1,0 +1,73 @@
+@import '../../style/theme.module';
+
+.component {
+    height: 4rem;
+    background: $base-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 0.5rem 0 rgba(117, 117, 117, 0.137);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.container {
+    @include container;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: max-content;
+    &>li {
+        &:hover {
+            &>a {
+                background: rgb(230, 230, 230);
+                color: black;
+            }
+        }
+        list-style: none;
+        &>a {
+            padding: 1rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    &>a {
+        text-decoration: none;
+        color: rgb(34, 224, 34) !important;
+    }
+}
+
+.call_button {
+    margin-left: 24px;
+    &>a {
+        padding: 8px 12px !important;
+        text-align: center;
+        color: white;
+        background: rgba(25, 199, 25, 0.897);
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        padding: 0.75rem 1rem;
+        font-weight: bold;
+        border-radius: 4px;
+        &:hover {
+            background: rgb(45, 233, 45) !important;
+            color: white !important;
+        }
+    }
+}
